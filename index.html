@@ -2,741 +2,341 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Arshad Suraj</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Arshad Suraj - Software Engineer">
+  <title>Arshad Suraj | Software Engineer</title>
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧑‍💻</text></svg>" />
 
-    <!-- Icon Font Stylesheet -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- External Styles -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
-    <!-- Libraries Stylesheet -->
-    <link rel="stylesheet" href="lib/animate/animate.min.css" />
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+  <!-- Main JavaScript -->
+  <script src="js/main.js" defer></script>
 </head>
 
 <body>
+  <!-- Reading Progress Bar -->
+  <div id="progress-container">
+    <div id="progress-bar"></div>
+  </div>
 
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-            <span class="sr-only">Loading...</span>
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-outline"></div>
+
+  <!-- Background Particle Animation -->
+  <canvas id="bg-canvas"></canvas>
+
+  <header>
+    <div class="logo">Arshad.</div>
+    <nav>
+      <ul>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#certifications" class="nav-link">Certifications</a></li>
+        <li><a href="#blogs" class="nav-link">Blogs</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+      <div class="hero-content fade-in">
+        <p class="highlight">Hello, I'm</p>
+        <h1>Arshad Suraj</h1>
+        <h2><span id="typewriter"></span><span class="typewriter-cursor">&nbsp;</span></h2>
+        <p class="hero-description">
+          who Loves <span class="highlight">machines</span> more than <span class="highlight">humans</span>. Born to
+          <span class="highlight">code</span>, forced to <span class="highlight">socialize</span>! 😎.
+        </p>
+
+        <div class="hero-btns">
+          <a href="#contact" class="btn btn-primary">Let's Talk</a>
         </div>
-    </div>
-    <!-- Spinner End -->
+      </div>
 
-    <!-- Navbar Start -->
-    <div class="container-fluid nav-section border-0">
-        <nav class="navbar navbar-light">
-            <div class="navbar-nav flex-column">
-                <a href="#Home" class="nav-item nav-link active"><span class="fa fa-home"></span> Home</a>
-                <a href="#Education" class="nav-item nav-link"><span class="fa fa-graduation-cap"></span>
-                    Education</a>
-                <a href="#Experience" class="nav-item nav-link"><span class="fa fa-briefcase"></span>
-                    Experience</a>
-                <a href="#Skills" class="nav-item nav-link"><span class="fa fa-cogs"></span> Skills</a>
-                <a href="#Certification" class="nav-item nav-link"><span class="fa fa-certificate"></span>
-                    Certification</a>
-                <a href="#Service" class="nav-item nav-link"><span class="fab fa-servicestack"></span> Service</a>
-                <a href="#Blog" class="nav-item nav-link"><span class="fa fa-blog"></span> Blog</a>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
-
-    <!-- Header Start -->
-    <div class="container-fluid" id="Home">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-12 col-lg-3">
-                    <div class="header-content bg-dark h-100 pt-6 pe-6 pb-6">
-                        <a href="index.html" class="navbar-brand d-inline-flex pb-5 wow fadeInUp" data-wow-delay="0.1s">
-                            <h1 class="display-6 text-white mb-0">👋 Hello!</h1>
-                        </a>
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
-                            data-wow-delay="0.3s">
-                            <h1 class="display-6 text-white mb-0">I'm Arshad Suraj✌️ </h1>
-                            <p class="text-white sub-title">who Loves machines more than humans. Born to code, forced to
-                                socialize! 😎</p>
-
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-lg-9">
-                    <div class="header-img d-flex h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-5">
-                            <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.1s">
-                                <div class="bg-light p-4" style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;">
-                                    <img src="img/profile.webp" class="img-fluid w-100"
-                                        style="border-radius: 68% 32% 100% 0% / 0% 75% 25% 100%;" alt="Image">
-                                </div>
-                            </div>
-                            <div class="col-xl-6 wow fadeInUp" data-wow-delay="0.3s">
-                                <h1 class="display-6 mb-4">Software Engineer 🧑‍💻</h1>
-                                <p class="mb-4">Driven by curiosity and fueled by code, I specialize in crafting clean,
-                                    efficient, and scalable backend systems. With over 4 years of industry experience
-                                    and a solid foundation in Software Engineering, along with hands-on expertise in
-                                    cloud computing, DevOps pipelines, and AI, I build solutions that drive real-world
-                                    impact. Whether it's a web app, mobile app, desktop app, API, or AI integration — I
-                                    turn ideas into reality..
-                                </p>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="fas fa-envelope text-primary me-3"></i>
-                                    <p class="text-dark mb-0">m.arshadsuraj@gmail.com</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="fa fa-phone-alt text-primary me-3"></i>
-                                    <p class="text-dark mb-0">(+94) 714006101</p>
-                                </div>
-                                <div class="d-flex align-items-center mb-2">
-                                    <i class="fab fa-firefox-browser text-primary me-3"></i>
-                                    <p class="text-dark mb-0"><a href="https://arshadsuraj.me">arshadsuraj.me</a></p>
-                                </div>
-                                <div class="d-flex align-items-center mb-4">
-                                    <i class="fas fa-map-marker-alt text-primary me-3"></i>
-                                    <p class="text-dark mb-0">11/6, Thotupola Road, Pallimulla, Panadura</p>
-                                </div>
-                                <div class="d-flex">
-                                    <a class="btn btn-primary btn-sm-square me-3"
-                                        href="https://web.facebook.com/m.arshad.suraj" target="_blank">
-                                        <i class="fab fa-facebook-f text-white"></i></a>
-                                    <a class="btn btn-primary btn-sm-square me-3" href="https://x.com/msm_arshad"
-                                        target="_blank">
-                                        <i class="fab fa-twitter text-white"></i></a>
-                                    <a class="btn btn-primary btn-sm-square me-3"
-                                        href="https://www.instagram.com/m.arshad.suraj/" target="_blank">
-                                        <i class="fab fa-instagram text-white"></i></a>
-                                    <a class="btn btn-primary btn-sm-square me-3"
-                                        href="https://www.linkedin.com/in/arshad-suraj/" target="_blank">
-                                        <i class="fab fa-linkedin-in text-white"></i></a>
-                                    <a class="btn btn-primary btn-sm-square me-0"
-                                        href="https://medium.com/@arshadsuraj/" target="_blank">
-                                        <i class="fab fa-medium text-white"></i></a>
-                                    <a class="btn btn-primary btn-sm-square ms-3"
-                                        href="https://github.com/m-arshad-suraj" target="_blank">
-                                        <i class="fab fa-github text-white"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div class="hero-image fade-in delay-200">
+        <div class="img-wrapper">
+          <img src="img/profile.webp" alt="Arshad Suraj Profile" />
         </div>
-    </div>
-    <!-- Header End -->
+      </div>
+    </section>
 
-    <!-- Education Start -->
-    <div class="container-fluid" id="Education">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="education-header bg-dark h-100 pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
-                            data-wow-delay="0.1s">
-                            <p class="text-white sub-title">Education</p>
-                            <h1 class="display-6 text-white mb-0">My education qualification</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="education-content h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <p class="fs-5 mb-0 me-4">University of Colombo School of Computing</p>
-                                        <div>
-                                            <span class="fa fa-calendar me-1"></span> 2025 - present
-                                        </div>
-                                    </div>
-                                    <h4 class="mb-3">M.Sc. in Computer Science</h4>
-                                    <p class="mb-0">Currently pursuing a Master of Science in Computer Science, with a
-                                        focus on advanced topics such as <b>Advance Algorithms, Advance Software
-                                            Architecture, Data Science, Machine Learning, Generative AI, Cloud
-                                            Computing, Cyber Security</b> etc.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <p class="fs-5 mb-0 me-4">University of Bedfordshire (UK)</p>
-                                        <div>
-                                            <span class="fa fa-calendar me-1"></span> 2018 - 2021
-                                        </div>
-                                    </div>
-                                    <h4 class="mb-3">B.Sc. (Hons) in Computer Science & Software Engineering</h4>
-                                    <p class="mb-0">
-                                        Awarded <b>First Class Honours</b>. Studied at the <b>Sri Lanka Institute of
-                                            Information Technology (SLIIT)</b>, affiliated with the University of
-                                        Bedfordshire (UK).<br>
-                                        <b>Final year project:</b> Developed an AI-powered chatbot to help GCE O/L
-                                        students learn history through interactive conversations using <b>Natural
-                                            Language Processing (NLP)</b>.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="fade-in">
+      <h2 class="section-title">About Me</h2>
+      <div class="glass-card">
+        <p>Driven by curiosity and fueled by code, I specialize in crafting clean, efficient, and scalable backend
+          systems. With over 5 years of industry experience and a solid foundation in Software Engineering, along with
+          hands-on expertise in cloud computing, DevOps pipelines, and AI, I build solutions that drive real-world
+          impact. Whether it's a web app, mobile app, desktop app, API, or AI integration — <span class="highlight">I
+            turn ideas into reality.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="fade-in">
+      <h2 class="section-title">Education</h2>
+      <div class="edu-grid">
+
+        <div class="glass-card">
+          <div class="edu-header">
+            <h3 class="edu-title">University of Colombo School of Computing</h3>
+            <span class="highlight edu-year">2025 - Present</span>
+          </div>
+          <h4 class="edu-degree">M.Sc. in Computer Science</h4>
+          <p class="edu-desc">
+            Currently pursuing a Master of Science in Computer Science, with a focus on advanced topics such as <span
+              class="highlight">Advance Algorithms, Advance Software Architecture, Data Science, Machine Learning,
+              Generative AI, Cloud Computing, Cyber Security</span> etc.
+          </p>
         </div>
-    </div>
-    <!-- Education End -->
 
-    <!-- Experience Start -->
-    <div class="container-fluid" id="Experience">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="experience-header bg-dark h-100 pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
-                            data-wow-delay="0.1s">
-                            <p class="text-white sub-title">Experience</p>
-                            <h1 class="display-6 text-white mb-0">My real work experience</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="experience-content h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <p class="fs-5 mb-0 me-4">Virtusa Pvt. Ltd.</p>
-                                        <div>
-                                            <span class="fa fa-calendar me-1"></span> 2023 - present
-                                        </div>
-                                    </div>
-                                    <h4 class="mb-3">Associate Consultant - Technology</h4>
-                                    <p class="mb-0">Leading a team of backend developers to deliver high-performance
-                                        solutions aligned with business goals.
-                                        Overseeing technical design, sprint planning, and mentoring team members.
-                                        Driving quality through code reviews, architectural improvements, and process
-                                        automation.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <p class="fs-5 mb-0 me-4">Virtusa Pvt. Ltd.</p>
-                                        <div>
-                                            <span class="fa fa-calendar me-1"></span> 2022 - 2023
-                                        </div>
-                                    </div>
-                                    <h4 class="mb-3">Software Engineer</h4>
-                                    <p class="mb-0">Designed backend architecture and led implementation for scalable
-                                        enterprise applications.
-                                        Owned end-to-end delivery, resolved critical production issues, and conducted
-                                        code reviews.
-                                        Mentored junior engineers and collaborated closely with cross-functional teams.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="experience-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="d-flex align-items-center mb-3">
-                                        <p class="fs-5 mb-0 me-4">Virtusa Pvt. Ltd.</p>
-                                        <div>
-                                            <span class="fa fa-calendar me-1"></span> 2021 - 2022
-                                        </div>
-                                    </div>
-                                    <h4 class="mb-3">Associate Software Engineer</h4>
-                                    <p class="mb-0">Developed backend applications and contributed to bug fixes,
-                                        testing, and on-time sprint delivery.
-                                        Gained hands-on experience with core software engineering principles and team
-                                        collaboration tools.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="glass-card">
+          <div class="edu-header">
+            <h3 class="edu-title">University of Bedfordshire (UK)</h3>
+            <span class="highlight edu-year">2018 - 2021</span>
+          </div>
+          <h4 class="edu-degree">B.Sc. (Hons) in Computer Science
+            & Software Engineering</h4>
+          <p class="edu-desc">
+            <span class="highlight">Awarded First Class Honours.</span> Studied at the <span class="highlight">Sri Lanka
+              Institute of Information Technology (SLIIT)</span>, affiliated with the <span class="highlight">University
+              of Bedfordshire (UK)</span>.
+            <br>
+            <strong class="edu-final-project">Final year project:</strong> Developed an
+            AI-powered chatbot to help GCE O/L students learn history through interactive conversations using <span
+              class="highlight">Natural Language Processing (NLP)</span>.
+          </p>
         </div>
-    </div>
-    <!-- Experience End -->
 
-    <!-- Skills Start -->
-    <div class="container-fluid" id="Skills">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="skills-header h-100 bg-dark pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
-                            data-wow-delay="0.1s">
-                            <p class="text-white sub-title">Skills</p>
-                            <h1 class="display-6 text-white mb-0">My expertise skills</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="skills-content h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-4">
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.1s">
-                                    <svg viewBox="0 32 128 64" style="transform: translate(-10px, 10px);">
-                                        <g fill="#00acd7" fill-rule="evenodd">
-                                            <path
-                                                d="M11.156 54.829c-.243 0-.303-.122-.182-.303l1.273-1.637c.12-.182.424-.303.666-.303H34.55c.243 0 .303.182.182.364l-1.03 1.576c-.121.181-.424.363-.606.363zM2.004 60.404c-.242 0-.303-.12-.182-.303l1.273-1.636c.121-.182.424-.303.667-.303h27.636c.242 0 .364.182.303.364l-.485 1.454c-.06.243-.303.364-.545.364zM16.67 65.98c-.242 0-.302-.182-.181-.364l.848-1.515c.122-.182.364-.363.607-.363h12.12c.243 0 .364.181.364.424l-.12 1.454c0 .243-.243.425-.425.425zM79.58 53.738c-3.819.97-6.425 1.697-10.182 2.666-.91.243-.97.303-1.758-.606-.909-1.03-1.576-1.697-2.848-2.303-3.819-1.878-7.516-1.333-10.97.91-4.121 2.666-6.242 6.605-6.182 11.514.06 4.849 3.394 8.849 8.182 9.516 4.121.545 7.576-.91 10.303-4 .545-.667 1.03-1.394 1.636-2.243H56.064c-1.272 0-1.575-.788-1.151-1.818.788-1.879 2.242-5.03 3.09-6.606.183-.364.607-.97 1.516-.97h22.06c-.12 1.637-.12 3.273-.363 4.91-.667 4.363-2.303 8.363-4.97 11.878-4.364 5.758-10.06 9.333-17.273 10.303-5.939.788-11.454-.364-16.302-4-4.485-3.394-7.03-7.879-7.697-13.454-.788-6.606 1.151-12.546 5.151-17.758 4.303-5.636 10-9.212 16.97-10.485 5.697-1.03 11.151-.363 16.06 2.97 3.212 2.121 5.515 5.03 7.03 8.545.364.546.122.849-.606 1.03z">
-                                            </path>
-                                            <path
-                                                d="M99.64 87.253c-5.515-.122-10.546-1.697-14.788-5.334-3.576-3.09-5.818-7.03-6.545-11.697-1.091-6.848.787-12.909 4.909-18.302 4.424-5.819 9.757-8.849 16.97-10.122 6.181-1.09 12-.484 17.272 3.091 4.788 3.273 7.757 7.697 8.545 13.515 1.03 8.182-1.333 14.849-6.97 20.546-4 4.06-8.909 6.606-14.545 7.757-1.636.303-3.273.364-4.848.546zm14.424-24.485c-.06-.788-.06-1.394-.182-2-1.09-6-6.606-9.394-12.363-8.06-5.637 1.272-9.273 4.848-10.606 10.545-1.091 4.727 1.212 9.515 5.575 11.454 3.334 1.455 6.667 1.273 9.879-.363 4.788-2.485 7.394-6.364 7.697-11.576z"
-                                                fill-rule="nonzero"></path>
-                                        </g>
-                                    </svg>
-                                    <p class="mb-0"></br>GoLang</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.3s">
-                                    <div class="text-primary text-center mb-3"><span class="fab fa-java fa-6x"></span>
-                                    </div>
-                                    <p class="mb-0">Java</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.5s">
-                                    <div class="text-primary text-center mb-3"><span class="fab fa-python fa-6x"></span>
-                                    </div>
-                                    <p class="mb-0">Python</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.7s">
-                                    <div class="text-primary text-center mb-3"><span class="fab fa-docker fa-6x"></span>
-                                    </div>
-                                    <p class="mb-0">Docker</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.1s">
-                                    <div class="text-primary text-center mb-3"><span class="fab fa-google fa-3x"></span>
-                                    </div>
-                                    <p class="mb-0">Google Cloud Platform</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.2s">
-                                    <div class="text-primary text-center mb-3"><span class="fab fa-aws fa-3x"></span>
-                                    </div>
-                                    <p class="mb-0">Amazon Web Services</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.3s">
-                                    <div class="text-primary text-center mb-3"><span class="fab fa-html5 fa-3x"></span>
-                                    </div>
-                                    <p class="mb-0">Front-end Technologies & Designing</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.6s">
-                                    <div class="text-primary text-center mb-3"><span
-                                            class="fas fa-database fa-4x"></span>
-                                    </div>
-                                    <p class="mb-0">SQL Databases</p>
-                                </div>
-                            </div>
-                            <div class="col-6 col-md-4 col-lg-4 col-xl-3">
-                                <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp"
-                                    data-wow-delay="0.65s">
-                                    <div class="text-primary text-center mb-3"><span
-                                            class="fab fa-android fa-3x"></span>
-                                    </div>
-                                    <p class="mb-0">Android Development</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="fade-in">
+      <h2 class="section-title">Where I've Worked</h2>
+      <div class="job-container">
+
+        <!-- Job 1 -->
+        <div class="glass-card timeline-item">
+          <h3 class="job-title">Associate Consultant - Technology <span class="highlight">@ Virtusa Pvt. Ltd.</span>
+          </h3>
+          <p class="job-duration">2023 - Present</p>
+          <ul class="job-details">
+            <li class="job-detail-item">▹ Leading a team of backend developers to deliver high-performance solutions
+              aligned with business goals.</li>
+            <li class="job-detail-item">▹ Overseeing technical design, sprint planning, and mentoring team members.
+            </li>
+            <li>▹ Driving quality through code reviews, architectural improvements, and process automation.</li>
+          </ul>
         </div>
-    </div>
-    <!-- Skills End -->
 
-    <!--Professional certification start-->
-    <div class="container-fluid" id="Certification">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="certification-header bg-dark h-100 pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
-                            data-wow-delay="0.1s">
-                            <p class="text-white sub-title">My Certifications</p>
-                            <h1 class="display-6 text-white mb-0">What I've Achieved</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="certification-content h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="certification-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="row g-3 align-items-center">
-                                        <!-- Image Column -->
-                                        <div class="col-md-4 text-center text-md-start">
-                                            <img src="./img/OCAJSE8.jpg" alt="Oracle Certification"
-                                                class="img-fluid rounded" style="max-height: 150px;">
-                                        </div>
-                                        <!-- Content Column -->
-                                        <div class="col-md-8">
-                                            <h4 class="mb-2">Oracle Certified Associate, Java SE 8 Programmer</h4>
-                                            <p class="mb-2 small">
-                                                Demonstrated proficiency in Java programming, including object-oriented
-                                                concepts, Java APIs, and development tools.
-                                            </p>
-                                            <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=698ECEABD548B673B0C23E29498350262AE422797A93BE968A9DCDF38B649417"
-                                                class="btn btn-sm btn-primary" target="_blank">View Certification</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+        <!-- Job 2 -->
+        <div class="glass-card timeline-item">
+          <h3 class="job-title">Software Engineer <span class="highlight">@ Virtusa Pvt. Ltd.</span></h3>
+          <p class="job-duration">2022 - 2023</p>
+          <ul class="job-details">
+            <li class="job-detail-item">▹ Designed backend architecture and led implementation for scalable
+              enterprise applications.</li>
+            <li class="job-detail-item">▹ Owned end-to-end delivery, resolved critical production issues, and
+              conducted code reviews.</li>
+            <li>▹ Mentored junior engineers and collaborated closely with cross-functional teams.</li>
+          </ul>
         </div>
-    </div>
-    <!--Professional certification End-->
 
-    <!-- Service Start -->
-    <div class="container-fluid" id="Service">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
-                            data-wow-delay="0.1s">
-                            <p class="text-white sub-title">My Services</p>
-                            <h1 class="display-6 text-white mb-0">What I do</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="service-content h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-4">
-                            <div class="col-12">
-                                <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.7s">
-                                    <div class="row g-4 align-items-center">
-                                        <div class="col-xl-2">
-                                            <i class="fas fa-server fa-3x"></i>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <a href="#" class="h4 mb-0">Backend API Development</a>
-                                        </div>
-                                        <div class="col-xl-4">
-                                            <p class="mb-0">I architect and build robust, scalable backend APIs for web,
-                                                mobile, and desktop applications. My solutions ensure secure data flow,
-                                                fast performance, and easy integration with third-party services or
-                                                front-end clients.</p>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <p><i class="fa fa-check me-2"></i> RESTful & GraphQL APIs</p>
-                                            <p><i class="fa fa-check me-2"></i> Authentication & Security</p>
-                                            <p class="mb-0"><i class="fa fa-check me-2"></i> Cloud & On-Prem Deployments
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="row g-4 align-items-center">
-                                        <div class="col-xl-2">
-                                            <i class="fas fa-laptop-code fa-3x"></i>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <a href="#" class="h4 mb-0">Web Development</a>
-                                        </div>
-                                        <div class="col-xl-4">
-                                            <p class="mb-0">I craft responsive, high-performance websites and web apps
-                                                tailored to your business goals. From sleek landing pages to robust
-                                                backend systems, I deliver clean code, modern UI, and seamless user
-                                                experiences. Whether you're starting from scratch or need a revamp —
-                                                I've got you covered.
-                                            </p>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <p><i class="fa fa-check me-2"></i> Custom Web Apps</p>
-                                            <p><i class="fa fa-check me-2"></i> Full-Stack Development</p>
-                                            <p class="mb-0"><i class="fa fa-check me-2"></i> API Integration &
-                                                Automation</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="row g-4 align-items-center">
-                                        <div class="col-xl-2">
-                                            <i class="fab fa-app-store fa-3x"></i>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <a href="#" class="h4 mb-0">Mobile Application</a>
-                                        </div>
-                                        <div class="col-xl-4">
-                                            <p class="mb-0">I design and develop user-friendly, high-performance mobile
-                                                apps that run smoothly on Android devices. From idea to launch, I focus
-                                                on delivering intuitive interfaces, efficient code, and seamless
-                                                functionality — all tailored to your audience and goals.
-                                            </p>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <p><i class="fa fa-check me-2"></i> Native Android Apps</p>
-                                            <p><i class="fa fa-check me-2"></i> UI/UX Design</p>
-                                            <p class="mb-0"><i class="fa fa-check me-2"></i> App Optimization &
-                                                Maintenance</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.9s">
-                                    <div class="row g-4 align-items-center">
-                                        <div class="col-xl-2">
-                                            <i class="fas fa-desktop fa-3x"></i>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <a href="#" class="h4 mb-0">Desktop Application Development</a>
-                                        </div>
-                                        <div class="col-xl-4">
-                                            <p class="mb-0">I develop powerful, user-friendly desktop applications. My
-                                                apps feature intuitive interfaces, reliable performance, and seamless
-                                                integration with local or cloud services.</p>
-                                        </div>
-                                        <div class="col-xl-3">
-                                            <p><i class="fa fa-check me-2"></i> High-Performance Optimized Applications
-                                            </p>
-                                            <p><i class="fa fa-check me-2"></i> Custom UI/UX</p>
-                                            <p class="mb-0"><i class="fa fa-check me-2"></i> Integration & Automation
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <!-- Job 3 -->
+        <div class="glass-card timeline-item">
+          <h3 class="job-title">Associate Software Engineer <span class="highlight">@ Virtusa Pvt. Ltd.</span></h3>
+          <p class="job-duration">2021 - 2022</p>
+          <ul class="job-details">
+            <li class="job-detail-item">▹ Developed backend applications and contributed to bug fixes, testing, and
+              on-time sprint delivery.</li>
+            <li>▹ Gained hands-on experience with core software engineering principles and team collaboration tools.
+            </li>
+          </ul>
         </div>
-    </div>
-    <!-- Service End -->
 
-    <!-- Blog Start -->
-    <div class="container-fluid" id="Blog">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-lg-3">
-                    <div class="blog-header h-100 bg-dark pt-6 pe-6 pb-6">
-                        <div class="text-start d-flex flex-column justify-content-center wow fadeInUp"
-                            data-wow-delay="0.1s">
-                            <p class="text-white sub-title">Blog</p>
-                            <h1 class="display-6 text-white mb-0">Recent Posts</h1>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="blog-content h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-4">
-                            <div class="col-xl-6">
-                                <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
-                                    <div class="row g-4">
-                                        <div class="col-4">
-                                            <div class="blog-item-img bg-dark h-100">
-                                                <a href="https://medium.com/nerd-for-tech/microservices-best-practices-every-developer-should-follow-a977740dc70a"
-                                                    target="_blank">
-                                                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*zHOnYsGws6Bb17fGJr3uow.png"
-                                                        class="img-fluid w-100 h-100" style="object-fit: cover;"
-                                                        alt="Image">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="h-100">
-                                                <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i>
-                                                    August 23, 2021</p>
-                                                <a href="https://medium.com/nerd-for-tech/microservices-best-practices-every-developer-should-follow-a977740dc70a"
-                                                    class="d-inline-block h4 mb-4" target="_blank">Microservices
-                                                    Best
-                                                    Practices
-                                                    Every Developer Should Follow</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
-                                    <div class="row g-4">
-                                        <div class="col-4">
-                                            <div class="blog-item-img bg-dark h-100">
-                                                <a href="https://medium.com/nerd-for-tech/overview-of-social-engineering-5d94530a96cf"
-                                                    target="_blank">
-                                                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*5Q-pYVI1UzfjobHX"
-                                                        class="img-fluid w-100 h-100" style="object-fit: cover;"
-                                                        alt="Image">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="h-100">
-                                                <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i>
-                                                    May 15, 2021</p>
-                                                <a href="https://medium.com/nerd-for-tech/overview-of-social-engineering-5d94530a96cf"
-                                                    class="d-inline-block h4 mb-4" target="_blank">Overview of Social
-                                                    Engineering</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="blog-item wow fadeInUp" data-wow-delay="0.5s">
-                                    <div class="row g-4">
-                                        <div class="col-4">
-                                            <div class="blog-item-img bg-dark h-100">
-                                                <a href="https://medium.com/@arshadsuraj/java-floating-point-numbers-rounding-problem-solution-a07e019b9dd5"
-                                                    target="_blank">
-                                                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*5lglqUfdewi2EH8_"
-                                                        class="img-fluid w-100 h-100" style="object-fit: cover;"
-                                                        alt="Image">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="h-100">
-                                                <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i>
-                                                    May 7, 2021</p>
-                                                <a href="https://medium.com/@arshadsuraj/java-floating-point-numbers-rounding-problem-solution-a07e019b9dd5"
-                                                    class="d-inline-block h4 mb-4" target="_blank">JAVA Floating Point
-                                                    Number’s
-                                                    Rounding Problem & Solution</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="blog-item wow fadeInUp" data-wow-delay="0.7s">
-                                    <div class="row g-4">
-                                        <div class="col-4">
-                                            <div class="blog-item-img bg-dark h-100">
-                                                <a href="https://medium.com/nerd-for-tech/jvm-architecture-8898cc86ad83"
-                                                    target="_blank">
-                                                    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*El3x_ERtCSTsU7mfzlTR8Q.png"
-                                                        class="img-fluid w-100 h-100" style="object-fit: cover;"
-                                                        alt="Image">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="col-8">
-                                            <div class="h-100">
-                                                <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i>
-                                                    May 6, 2021</p>
-                                                <a href="https://medium.com/nerd-for-tech/jvm-architecture-8898cc86ad83"
-                                                    class="d-inline-block h4 mb-4" target="_blank">JVM Architecture</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 wow fadeInUp" data-wow-delay="0.9s">
-                                <div class="blog-btn d-flex justify-content-center">
-                                    <p class="mb-0 me-2">For More Works Visit</p>
-                                    <a href="https://medium.com/@arshadsuraj" class="btn d-inline-block p-0"
-                                        target="_blank">My
-                                        Blog</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="fade-in">
+      <h2 class="section-title">Skills & Technologies</h2>
+      <div class="grid-skills">
+        <div class="skill-icon" title="GoLang"><i class="devicon-go-original-wordmark colored"></i></div>
+        <div class="skill-icon" title="Java"><i class="devicon-java-plain-wordmark colored"></i></div>
+        <div class="skill-icon" title="Python"><i class="devicon-python-plain-wordmark colored"></i></div>
+        <div class="skill-icon" title="Docker"><i class="devicon-docker-plain-wordmark colored"></i></div>
+        <div class="skill-icon" title="GCP"><i class="devicon-googlecloud-plain-wordmark colored"></i></div>
+        <div class="skill-icon" title="AWS"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+        <div class="skill-icon" title="Frontend Technologies"><i class="fas fa-laptop-code icon-react"></i>
         </div>
-    </div>
-    <!-- Blog End -->
+        <div class="skill-icon" title="SQL"><i class="fas fa-database icon-sql"></i></div>
+        <div class="skill-icon" title="NoSQL"><i class="fas fa-layer-group icon-nosql"></i></div>
+        <div class="skill-icon" title="Android"><i class="devicon-android-plain-wordmark colored"></i></div>
+      </div>
+    </section>
 
-    <!-- Footer Start -->
-    <div class="container-fluid footer bg-dark border-bottom-0">
-        <div class="container wow fadeIn" data-wow-delay="0.1s">
-            <div class="row g-0">
-                <div class="col-12">
-                    <div class="footer-content h-100 pt-6 ps-6 pb-6">
-                        <div class="row g-4 align-items-center">
-                            <div class="col-12 text-center">
-                                <div class="d-flex justify-content-center">
-                                    <a class="btn btn-light btn-md-square me-3"
-                                        href="https://web.facebook.com/m.arshad.suraj" target="_blank"><i
-                                            class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-light btn-md-square me-3" href="https://x.com/msm_arshad"
-                                        target="_blank"><i class="fab fa-twitter"></i></a>
-                                    <a class="btn btn-light btn-md-square me-3"
-                                        href="https://www.instagram.com/m.arshad.suraj/" target="_blank"><i
-                                            class="fab fa-instagram"></i></a>
-                                    <a class="btn btn-light btn-md-square me-3" href="https://medium.com/@arshadsuraj/"
-                                        target="_blank"><i class="fab fa-medium"></i></a>
-                                    <a class="btn btn-light btn-md-square me-3" href="https://github.com/m-arshad-suraj"
-                                        target="_blank"><i class="fab fa-github"></i></a>
-                                    <a class="btn btn-light btn-md-square me-0"
-                                        href="https://www.linkedin.com/in/arshad-suraj/" target="_blank"><i
-                                            class="fab fa-linkedin-in"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Certifications -->
+    <section id="certifications" class="fade-in">
+      <h2 class="section-title">Certifications</h2>
+      <div class="glass-card cert-card">
+        <i class="devicon-java-plain colored cert-icon"></i>
+        <div>
+          <h3 class="cert-title">Oracle Certified Associate, Java SE 8 Programmer</h3>
+          <a href="https://catalog-education.oracle.com/pls/certview/sharebadge?id=698ECEABD548B673B0C23E29498350262AE422797A93BE968A9DCDF38B649417"
+            target="_blank" class="highlight cert-link">View Badge <i class="fas fa-external-link-alt"></i></a>
         </div>
-    </div>
-    <!-- Footer End -->
+      </div>
+    </section>
 
+    <!-- Blogs Section -->
+    <section id="blogs" class="fade-in">
+      <h2 class="section-title">Latest Articles</h2>
+      <div class="blog-container grid-blogs">
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>
+        <!-- Blog 1 -->
+        <div class="glass-card blog-card">
+          <div class="blog-img-container">
+            <img src="img/blog-microservices.png" alt="Microservices Architecture">
+          </div>
+          <div class="blog-content">
+            <h3 class="blog-header">Microservices Best Practices</h3>
+            <p class="blog-desc">
+              Essential best practices every developer should follow when designing and building scalable microservices
+              architectures.
+            </p>
+          </div>
+          <a href="https://medium.com/nerd-for-tech/microservices-best-practices-every-developer-should-follow-a977740dc70a"
+            target="_blank" class="highlight">Read Protocol <i class="fas fa-arrow-right"></i></a>
+        </div>
 
+        <!-- Blog 2 -->
+        <div class="glass-card blog-card">
+          <div class="blog-img-container">
+            <img src="img/blog-docker.png" alt="Docker Containers">
+          </div>
+          <div class="blog-content">
+            <h3 class="blog-header">Introduction to Docker</h3>
+            <p class="blog-desc">
+              A comprehensive guide to container-based development, explaining why Docker is crucial for modern software
+              engineering.
+            </p>
+          </div>
+          <a href="https://medium.com/geekculture/introduction-to-docker-and-container-based-development-d06a557ce739"
+            target="_blank" class="highlight">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <!-- Blog 3 -->
+        <div class="glass-card blog-card">
+          <div class="blog-img-container">
+            <img src="img/blog-js.png" alt="Modern JavaScript">
+          </div>
+          <div class="blog-content">
+            <h3 class="blog-header">Modern JavaScript</h3>
+            <p class="blog-desc">
+              Exploring the latest features in the JavaScript ecosystem that improve developer productivity and code
+              readability.
+            </p>
+          </div>
+          <a href="https://medium.com/nerd-for-tech/whats-new-in-modern-javascript-fb708c04b8f5" target="_blank"
+            class="highlight">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
 
+      </div>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+      <div class="more-blogs-container">
+        <a href="https://arshadsuraj.medium.com/" target="_blank" class="btn btn-secondary btn-square">More Blogs</a>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="fade-in">
+      <h2 class="section-title">What I Can Do For You</h2>
+      <div class="grid-services">
+
+        <!-- Service 1 -->
+        <div class="glass-card service-card">
+          <i class="fas fa-server service-icon backend"></i>
+          <h3 class="service-title">Backend & API Development</h3>
+          <p class="service-desc">
+            Robust, scalable server-side solutions and RESTful APIs optimized for performance and security.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="glass-card service-card">
+          <i class="fas fa-laptop-code service-icon web"></i>
+          <h3 class="service-title">Web Applications</h3>
+          <p class="service-desc">
+            Modern, responsive web apps with intuitive UI/UX design and seamless interactivity.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="glass-card service-card">
+          <i class="fas fa-mobile-alt service-icon mobile"></i>
+          <h3 class="service-title">Mobile Applications</h3>
+          <p class="service-desc">
+            Cross-platform mobile experiences that bring your ideas to life on both iOS and Android.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <p class="highlight contact-intro">05. What's Next?</p>
+      <h2 class="contact-title">Get In Touch</h2>
+      <p class="contact-description">
+        I'm currently looking for new opportunities, my inbox is always open.
+        Whether you have a question or just want to say hi, I'll try my best to get back to you!
+      </p>
+
+      <a href="mailto:m.arshadsuraj@gmail.com" class="btn contact-btn">Say Hello</a>
+
+      <div class="social-links">
+        <a href="https://github.com/m-arshad-suraj" target="_blank" title="GitHub" class="social-icon"><i
+            class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/arshad-suraj/" target="_blank" title="LinkedIn" class="social-icon"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://arshadsuraj.medium.com/" target="_blank" title="Medium" class="social-icon"><i
+            class="fab fa-medium"></i></a>
+        <a href="https://x.com/msm_arshad" target="_blank" title="X (Twitter)" class="social-icon"><i
+            class="fab fa-x-twitter"></i></a>
+        <a href="https://web.facebook.com/m.arshad.suraj" target="_blank" title="Facebook" class="social-icon"><i
+            class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/m.arshad.suraj/" target="_blank" title="Instagram" class="social-icon"><i
+            class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/+94714006101" target="_blank" title="WhatsApp" class="social-icon"><i
+            class="fab fa-whatsapp"></i></a>
+      </div>
+
+      <p class="footer-text">
+        Designed & Built by Arshad Suraj
+      </p>
+    </section>
+
+  </main>
+
+  <!-- Back To Top Button -->
+  <button id="back-to-top" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 </body>
 
 </html>
